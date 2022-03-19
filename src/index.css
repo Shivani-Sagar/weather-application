@@ -1,13 +1,60 @@
-body {
+*{
+  padding:0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: sans-serif, monospace;
+}
+
+.app{
+  background-image: url(./assets/warm-bg.jpg);
+  background-size: cover;
+  /* background-position: bottom; */
+  transition:0.4 ease-out;
+}
+.cold{
+  background-image: url(./assets/cold-bg.jpg);
+
+}
+
+main{
+  min-height: 100vh;
+}
+.search-box{
+  width: 100%;
+  margin:0 0 75px;
+}
+.search-box .search-bar{
+  border: none;
+  display: block;
+  border-radius: 0px 0px 20px 20px;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 5px rgb(0, 0, 0,0.1);
+  color:#313131;
+  font-size: 20px;
+}
+.search-box .search-bar:focus{
+  background-color: rgb(255, 255, 255, 0.75);
+}
+.location-box .location{
+  font-size: 32px;
+  color:#fff;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+.location-box .date{
+  font-size: 20px;
+  font-weight: 300;
+  color:#fff;
+  text-align: center;
+  font-style: italic;
+}
+@media only screen and (max-width: 600px) {
+  .app{
+    background-position: bottom;
+  }
 }
